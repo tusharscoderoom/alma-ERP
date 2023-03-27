@@ -1,0 +1,202 @@
+<!-- Header included -->
+<%- include("header.ejs") %>
+<section id="home-home" class="home">
+    <div class="home-title">
+        <h1>Welcome to the <span>College ERP</span> Portal</h1>
+        <h3>GL Bajaj Institute of Technology and Management (GLBITM)</h3>
+        <p>Greater Noida</p>
+    </div>
+    <div class="scroll-icon">
+        <a href="#home-main" class="fa-solid fa-circle-down"></a>
+    </div>
+</section>
+
+<!-- main section -->
+<section class="main" id="home-main">
+    <div class="container">
+        <div class="cardbox">
+            <div class="card">
+                <div class="imgbox">
+                    <!-- <img src="images/student.jpg" alt=""> -->
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="content">
+                    <form action="/home-login" method="post">
+                        <div class="title">
+                            <h3>Student</h3>
+                            <p>For Student Login go here</p>
+                        </div>
+                        <div class="actionbtn">
+                            <button 
+                                class="card-login-btn" 
+                                type="submit" 
+                                name="user_type" 
+                                value="Student"
+                            >Login</button>
+                            <button>Details</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="cardbox">
+            <div class="card">
+                <div class="imgbox">
+                    <!-- <img src="images/student.jpg" alt=""> -->
+                    <i class="fa-solid fa-person-chalkboard"></i>
+                </div>
+                <div class="content">
+                    <form action="/home-login" method="post">
+                        <div class="title">
+                            <h3>Teacher</h3>
+                            <p>For Teacher Login go here</p>
+                        </div>
+                        <div class="actionbtn">
+                            <button 
+                                class="card-login-btn" 
+                                type="submit" 
+                                name="user_type" 
+                                value="Teacher"
+                            >Login</button>
+                            <button>Details</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="cardbox">
+            <div class="card">
+                <div class="imgbox">
+                    <!-- <img src="images/student.jpg" alt=""> -->
+                    <i class="fa-solid fa-children"></i>
+                </div>
+                <div class="content">
+                    <form action="/home-login" method="post">
+                        <div class="title">
+                            <h3>Parent</h3>
+                            <p>For Parent Login go here</p>
+                        </div>
+                        <div class="actionbtn">
+                            <button 
+                                class="card-login-btn" 
+                                type="submit" 
+                                name="user_type" 
+                                value="Parent"
+                            >Login</button>
+                            <button>Details</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- the modal for login system -->
+<!-- Modal -->
+<!-- <section class="modal">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis tempore quis </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</section> -->
+
+
+<!-- the about-us section -->
+<section id="home-about" class="about-us">
+    <div class="about-title">
+        <h2>About Us</h2>
+    </div>
+    <div class="about-content">
+        <div class="imgbox-1">
+            <img class="img-1" src="images/clg-5.jpg" alt="">
+        </div>
+        <div class="about-content-text">
+            <p><span>GL Bajaj</span> Institute of Technology and Management is one of the quality driven Educational Institute in the Greater Noida/Delhi-NCR Region. GL Bajaj stands out as one of the best engineering and management college in UP. It also stands out in its approach to assist and equip the students for their overall development, giving them a strong foundation for a successful future. The institute offers B.Tech, MBA and MCA programs. This self financed institute is governed by Rajeev Memorial Academic Welfare Society (Registered Under Societies Registration Act 1860). <h5>It is approved by All India Council for Technical Education (AICTE), Ministry of Human Resource Development, Government of India and affiliated to Dr. A.P.J. Abdul Kalam Technical University, Lucknow.</h5></p>
+        </div>
+    </div>
+    <div class="about-content">
+        <div class="about-content-text">
+            <p><span>T</span>he institute has been maintaining its positions amongst the top engineering and management colleges in AKTU university results. It has been maintaining the highest pass percentage amongst the engineering and Management colleges in Noida and Greater Noida region under Dr. APJ Kalam University, Lucknow for the last eight years and is listed among the top engineering and management colleges in Greater Noida, Delhi NCR. In fact <h5>this engineering college has been listed among the top engineering of India by NIRF, issued by MHRD, Government of India.</h5> The Institute has also received awards for being one of the top engineering and management institutes of North India and UP by many organizations.</p>
+        </div>
+        <div class="imgbox-2">
+            <img class="img-2" src="images/clg-2.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- query form section -->
+<section id="home-query" class="query-form">
+    <div class="form-title">
+        <h2>Didn't get something ?<br> <span>Ask <i class="fa-solid fa-arrow-right"></i> </span></h2>
+    </div>
+    <div class="form-container">
+        <form action="/" method="post">
+            <div class="form-name">
+                <input type="text" name="fname" placeholder="First Name" required>
+                <input type="text" name="lname" placeholder="Last Name">
+            </div>
+            <input type="email" name="email" placeholder="Email Address" required> <br>
+            <input type="number" name="contact" placeholder="Contact Number" minlength="10"> <br>
+            <textarea name="query" cols="30" rows="10" placeholder="Enter your question" required></textarea>
+            <div class="form-btns">
+                <button type="submit" name="queryFormBtn">Submit</button>
+                <button type="reset" name="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- contact section -->
+<section id="home-contact" class="contact-us">
+    <div class="left-contact">
+        <h2>GL Bajaj Institute<br><span>of Technology and Management</span></h2>
+        <p>PLOT NO.2 , APJ ABDUL KALAM ROAD, KNOWLEDGE PARK 3, GREATER NOIDA, UTTAR PRADESH, INDIA, 201306</p>
+    </div>
+    <hr>
+    <div class="right-contact">
+        <div class="contact-icons">
+            <i class="icon fa-brands fa-facebook"></i>
+            <i class="icon fa-brands fa-twitter"></i>
+            <i class="icon fa-brands fa-instagram"></i>
+            <i class="icon fa-brands fa-linkedin"></i>
+            <i class="icon fa-brands fa-github"></i>
+        </div>
+        <div class="contact-copyright">
+            <p>All rights reserved | <span>&#169 Ankit, Tushar, Atul (2022-23)</span></p>
+        </div>
+    </div>
+    
+</section>
+
+<script>
+    
+    // document.addEventListener('click', (event) => {
+    //     console.log('clicked');
+    //     loginBtn.forEach((btn) => {
+    //         btn.addEventListener('click', () => {
+    //             document.querySelector(".form-container").classList.toggle('hide-form');
+    //         })
+    //     })
+    // })
+    // document.querySelector('.form-container').classList.add('hide-form');
+    
+</script>
+
+
+<!-- Footer included -->
+<%- include("footer.ejs") %>

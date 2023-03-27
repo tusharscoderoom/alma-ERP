@@ -1,0 +1,32 @@
+<!-- including header -->
+<%- include("../admin-header.ejs") -%>
+
+<section class="show-student">
+    <table class="show-student-content">
+        <tr>
+            <th>SNo.</th>
+            <th>Roll no</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Course</th>
+            <th>Year</th>
+        </tr>
+        <% students.forEach((student)=>{ %>
+            <tr>
+                <td><b><%= students.indexOf(student)+1 %>.</b></td>
+                <td><%= student.std_roll %></td>
+                <td><%= student.std_name.fname+" "+student.std_name.lname %></td>
+                <td><%= student.std_dob %></td>
+                <td><%= student.std_email %></td>
+                <td><%= student.std_contact %></td>
+                <td><%= student.course.name %></td>
+                <td><%= student.course.year %></td>
+            </tr>
+        <% }) %>
+    </table>
+</section>
+
+<!-- including footer -->
+<%- include("../admin-footer.ejs") -%>

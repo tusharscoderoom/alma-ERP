@@ -1,0 +1,54 @@
+<!-- includint header -->
+<%- include("../header.ejs") -%>
+
+<section class="std-main">
+    <!-- <div class="extra"></div> -->
+    <div class="std-sidebar-container">
+        <div class="std-sidebar">
+            <table>
+                <tr class="std-options">
+                    <td><i class="fa-solid fa-users-viewfinder"></i></td>
+                    <td>
+                        <form id="std-profile" action="<%= adminHeader[0] %>" method="post">
+                            <button type="submit"
+                                name="admin_rest_header_opt" 
+                                value="get-std"
+                                >Get <%= adminHeader[1]%>s</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr class="std-options">
+                    <td><i class="fa-solid fa-circle-plus"></i></td>
+                    <td>
+                        <form id="std-atten" action="<%= adminHeader[0] %>" method="post">
+                            <button type="submit"
+                                name="admin_rest_header_opt"
+                                value="add-std"
+                                >Add <%= adminHeader[1] %></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr class="std-options">
+                    <td><i class="fa-solid fa-trash-can"></i></td>
+                    <td>
+                        <form id="std-result" action="<%= adminHeader[0] %>" method="post">
+                            <button type="submit"
+                                name="admin_rest_header_opt"
+                                value="dlt-std"
+                                >Delete <%= adminHeader[1] %></button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="admin-home-btn">
+        <form action="/admin-home" method="post">
+            <button type="submit" name="admin_home" value="home">
+                <a class="header-icon fa-solid fa-house"></a><p>Home</p>
+            </button>
+        </form>
+    </div>
+    
+    <section class="std-content">

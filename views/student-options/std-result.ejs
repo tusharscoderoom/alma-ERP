@@ -1,0 +1,125 @@
+<!-- including student portal header -->
+<%- include("../student-portal-header.ejs") %>
+
+<div class="std-content">
+    <div class="content-result">
+        <h3 class="result-header">Result</h3>
+        <form class="result-request" action="/std-result" method="post">
+            <div class="result-semester">
+                <label for="sem-select">Semester: </label>
+                <select name="sem" id="sem-select">
+                    <option value="sem1" selected>Sem 1</option>
+                    <option value="sem2">Sem 2</option>
+                    <option value="sem3">Sem 3</option>
+                    <option value="sem4">Sem 4</option>
+                </select>
+            </div>
+            <div class="result-examtype">
+                <label for="exam-type">Exam: </label>
+                <select name="exam" id="exam-type">
+                    <option value="ST1" selected>ST 1</option>
+                    <option value="ST2">ST 2</option>
+                    <option value="ST3">ST 3</option>
+                    <option value="PUT">PUT</option>
+                </select>
+            </div>
+            <div class="result-btn">
+                <button type="submit" name="result" value="get_result">Get Result</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+
+        <button id="dwnl-result" class="dwnl-btn" download="2nd_Sessional_(Sem-III)_Report">Download Report</button>
+        
+        <!-- the result output -->
+        <div class="result-response" id="std-report">
+            <div class="response-header">
+                <h4>GL Bajaj Institute of Technology and Management</h4>
+                <h5>Greater Noida</h5>
+                <h4>Department of <%= course%></h4>
+                <h4>[ <%= exam_type%> Result (Sem- <%= sem%>) ]</h4>
+                <div class="marks-date">
+                    <p>Total Subjects: <span><%= total_sub%></span></p>
+                    <p>Exam Date: <span><%= exam_date%></span></p>
+                </div>
+            </div>
+            <div class="response-data">
+                <div class="response-personal">
+                    <table>
+                        <tr>
+                            <td>Roll No: </td>
+                            <td><%= roll_int%><b><%= roll_remainder%></b></td>
+                        </tr>
+                        <tr>
+                            <td>Name: </td>
+                            <td><%= std_name%></td>
+                        </tr>
+                        <tr>
+                            <td>Father Name: </td>
+                            <td><%= father_name%></td>
+                        </tr>
+                    </table>
+                </div>
+                <table class="marks-table">
+                    <div class="response-marks">
+                        <tr>
+                            <th><h4>Subject Name</h4></th>
+                            <th><h4>Max. Marks</h4></th>
+                            <th><h4>Obt. Marks</h4></th>
+                        </tr>
+                        <% score.forEach((item) => { %>
+                            <tr>
+                                <td><%= item.name%></td>
+                                <td><%= item.max_mark%></td>
+                                <td><%= item.obt_mark%></td>
+                            </tr>
+                        <% }) %>
+                        <!-- <tr>
+                            <td>Artificial Intelligence</td>
+                            <td>100</td>
+                            <td>78</td>
+                        </tr>
+                        <tr>
+                            <td>Web Technologies</td>
+                            <td>100</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td>Software Engineering</td>
+                            <td>100</td>
+                            <td>82</td>
+                        </tr>
+                        <tr>
+                            <td>Cloud Computing</td>
+                            <td>100</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Networks</td>
+                            <td>100</td>
+                            <td>73</td>
+                        </tr> -->
+                    </div>
+                </table>
+                <div class="response-total">
+                    <h4><%= result_status%></h4>
+                    <p><%= total_obt%>/<%= total_max%></p>
+                </div>
+            </div>
+            <div class="response-auth">
+                <h4>Head Of Department</h4>
+                <p>(Dr. Madhu Gaur)</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+    document.getElementById("dwnl-result").addEventListener('click', () => {
+        const result = document.getElementById("std-report");
+        html2pdf().from(result).to('pdf').save();
+    });
+</script>
+<!-- including student portal footer -->
+<!-- </section> !! included !! -->
+<%- include("../student-portal-footer.ejs") %>

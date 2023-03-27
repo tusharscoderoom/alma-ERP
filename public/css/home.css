@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/home.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* the header */
+.header {
+    width: 100vw;
+    /* background: rgb(153, 0, 255); */
+    background: rgb(185, 130, 40);
+    padding: 12px 0;
+    position: fixed;
+    color: #fff;
+    z-index: 1001;
+}
+.header ul {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.header ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 18px;
+}
+.header ul .page-title h1 {
+    font-size: 1.65rem;
+}
+.header .links form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header ul li .menu-item {    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.header ul li .menu-item .header-icon  {
+    margin: 2px;
+    font-size: 1.15rem;
+}
+.header ul li .menu-item a, .header ul form .item-btn {
+    display: block;
+    font-size: 0.8rem;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+}
+.header ul li .menu-item .item-btn {
+    padding-top: 2px;
+}
+.header ul .menu-greet {
+    width: 150px;
+    margin-right: 10px;
+}
+.header ul .menu-greet h4 {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* login-page */
+.home-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home-login::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1002;
+}
+.home-login .login-box {
+    z-index: 1003;
+    width: 30vw;
+    height: fit-content;
+    padding: 20px;
+    position: relative;
+    color: rgb(184, 123, 24);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 12px 2px rgba(221, 152, 42, 0.35);
+    /* border: 1px solid red; */
+}
+.home-login .login-box button {
+    position: relative;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.home-login .login-box .close-btn button {
+    position: absolute;
+    top: 3.5%;
+    right: 3.5%;
+    color: rgb(184, 123, 24);
+    font-weight: bold;
+    font-size: 1rem;
+}
+.home-login .login-box .login-content .login-header h3 {
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+.home-login .login-box .login-content .login-header hr {
+    width: 90%;
+    margin: 20px auto;
+    border: none;
+    border-bottom: 2px solid rgb(184, 123, 24);
+}
+.home-login .login-box .login-content .login-header input {
+    outline: none;
+    width: 85%;
+    padding: 8px 10px;
+    margin: 12px 20px;
+    font-size: 0.85rem;
+    color: rgb(184, 123, 24);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.25);
+}
+.home-login .login-box .login-content .login-btn {
+    padding-left: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-login .login-box .login-content .login-btn button {
+    background: rgb(184, 123, 24);
+    border-radius: 12px;
+    margin: 16px 0 8px 0;
+    padding: 10px 16px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 12px 2px rgba(221, 152, 42, 0.25);
+}
+.home-login .login-box .login-content .login-btn button:nth-child(2) {
+    color: rgb(184, 123, 24);
+    border: 1px solid rgb(184, 123, 24);
+    background-color: #fff;    
+}
+
+
+
+
+/* the home section */
+.home {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home h1 {
+    margin: 32px 0;
+    font-size: 4rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.home h1 span {
+    color: rgb(224, 151, 34);
+}
+.home h3, .home p {
+    font-size: 1.7rem;
+    color: rgb(224, 151, 34);
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+.home p {
+    font-size: 1.2rem;
+}
+.home .scroll-icon {
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 105px;
+}
+.home .scroll-icon a {
+    text-decoration: none;
+    color: rgb(71,72,67);
+}
+
+/* the main section */
+.main {
+    width: 100vw;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    width: inherit;
+    justify-content: center;
+    /* position: relative; */
+}
+.cardbox {
+    position: relative;
+    /* border: 1px solid red; */
+    margin: 0 50px;
+    top: 32px;
+}
+.card {
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 18px 5px rgba(0, 0, 0, 0.15);
+    transition: 0.06s;    
+}
+.card .imgbox {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    /* background-color: rgb(233, 171, 71); */
+    background-color: #fff;
+    box-shadow: 0 0 18px 5px rgba(116, 84, 34, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card:hover .imgbox {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    left: 140px;
+    transform: translateX(-50%);
+}
+img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.card .imgbox i {
+    font-size: 2.5rem;
+    /* color: rgb(224, 151, 34); */
+    color: rgb(92,91,86);
+    transition: 0.3s;
+}
+.card:hover .imgbox i {
+    font-size: 3.5rem;
+}
+.card .content {
+    height: inherit;
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+}
+.card:hover .content {
+    top: 40px;
+}
+.card .content h3 {
+    font-size: 1.15rem;
+    opacity: 0.8;
+}
+.card .content p {
+    position: relative;
+    bottom: 5px;
+    margin: 0 0 12px 0;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.7);
+}
+.card .content .actionbtn {
+    display: flex;
+    justify-content: space-around;
+}
+.card .content .actionbtn button {
+    margin: 12px 20px;
+    padding: 6px 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    background-color: rgb(224, 151, 34);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 12px 1px rgba(221, 152, 42, 0.35);
+    cursor: pointer;
+}
+.card .content .actionbtn button:nth-child(2){
+    background-color: #fff;
+    border: 2px solid rgb(224, 151, 34);
+    color: rgb(224, 151, 34);
+    /* opacity: 0.8; */
+}
+
+/* about us */
+.about-us {
+    width: 100vw;
+    height: 100vh;
+    padding: 60px 0 70px 0;
+    background: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+.about-us h2 {
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.about-us .about-content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    margin: 30px 0;
+}
+.about-us .about-content .imgbox-1, .about-us .about-content .imgbox-2 {
+    width: 280px;
+    height: 280px;
+    background: #000;
+    border-radius: 10px;
+    object-fit: cover;
+    overflow: hidden;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.35);
+    transform: rotate(5deg);
+}
+.about-us .about-content .imgbox-2 {
+    transform: rotate(-5deg);
+}
+.about-us .about-content .about-content-text {
+    display: inline-block;
+    max-width: 750px;
+    font-size: 1.15rem;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+
+}
+.about-us .about-content .about-content-text p span {
+    color: rgb(184, 123, 24);
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+/* Login form styles */
+.query-form {
+    margin: 32px 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.query-form .form-title {
+    position: relative;
+    bottom: 60px;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+}
+.query-form .form-title h2 span {
+    position: relative;
+    left: 25%;
+    top: 32px;
+}
+.query-form .form-title h2 span i {
+    position: relative;
+    left: 2%;
+    transform: rotate(-8deg);
+}
+.query-form .form-container {
+    border: 1px solid #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.5);
+
+}
+.query-form .form-container input, .query-form .form-container textarea {
+    width: 210px;
+    height: 45px;
+    margin: 12px;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    color: rgb(185,130,40);
+}
+.query-form .form-container input[name="email"], .query-form .form-container input[name="contact"] {
+    width: 468px;
+}
+.query-form .form-container textarea {
+    width: 468px;
+    height: 150px;
+    padding: 5px 10px;
+    font-size: 1.05rem;
+}
+.query-form .form-container .form-btns {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.query-form .form-container .form-btns button {
+    margin: 12px 20px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgb(224, 151, 34);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 1px rgba(221, 152, 42, 0.35);
+    cursor: pointer;
+}
+.query-form .form-container .form-btns button:nth-child(2) {
+    background: #fff;
+    border: 1px solid rgb(224, 151, 34);
+    color: rgb(224, 151, 34);
+}
+
+
+/* contact footer */
+.contact-us {
+    margin-top: 50px;
+    width: 100vw;
+    height: 25vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.contact-us .left-contact {
+    width: 400px;
+}
+.contact-us .left-contact h2 {
+    font-size: 1.7rem;
+}
+.contact-us .left-contact h2 span {
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 15px;
+}
+.contact-us .left-contact p {
+    font-size: 0.85rem;
+}
+.contact-us hr {
+    border: none;
+    border-right: 2px solid #fff;
+    height: 100px;
+}
+.contact-us .right-contact {
+    position: relative;
+    top: 24px;
+}
+.contact-us .right-contact .contact-icons {
+    text-align: center;
+}
+.contact-us .right-contact .contact-icons .icon {
+    margin: 0 6px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.contact-us .right-contact .contact-copyright {
+    margin-top: 12px;
+    font-size: 0.7rem;
+}
+.contact-us .right-contact .contact-copyright p span {
+    color: rgba(255, 255, 255, 0.65);
+}

@@ -1,0 +1,159 @@
+<!-- including header -->
+<%- include("../admin-header.ejs") -%>
+
+<section class="add-student">
+    <form  class="content-profile" action="/new-student" method="post">
+        <div class="profile-personal">
+            <h3>Personal Information</h3>
+            <hr>
+            <div class="user-personal">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="user-name">
+                                <p>First Name: <span><input type="text" name="fname" required></span></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="user-name">
+                                <p>Last Name: <span><input type="text" name="lname" required></span></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>DoB:</p></td>
+                        <td><span><input type="date" name="dob" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Contact:</p></td>
+                        <td><span class="p">+91 </span> <span><input type="number" name="contact" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Email:</p></td>
+                        <td><span><input type="email" name="email" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Permanent Address:</p></td>
+                        <td><span><input type="text" name="addr" required></span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="user-family">
+                <div class="user-parent">
+                    <table>
+                        <tr>
+                            <td><p>Father Name:</p></td>
+                            <td><span><input type="text" name="father_name" required></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Contact:</p></td>
+                            <td><span class="p">+91 </span> <span><input type="number" name="father_contact" required></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Occupation:</p></td>
+                            <td><span><input type="text" name="father_occu" required></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+                <div class="user-parent">
+                    <table>
+                        <tr>
+                            <td><p>Mother Name:</p></td>
+                            <td><span><input type="text" name="mother_name" required></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Contact:</p></td>
+                            <td><span class="p">+91 </span> <span> <input type="text" name="mother_contact"></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Occupation:</p></td>
+                            <td><span><input type="text" name="mother_occu"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="profile-educational">
+            <h3>Educational Details</h3>
+            <hr>
+            <div class="course">
+                <table>
+                    <tr>
+                        <td><p>Roll Number:</p></td>
+                        <td><span><input type="number" name="roll" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Course:</p></td>
+                        <td><span><input type="text" name="course" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Year:</p></td>
+                        <td><span><input type="number" name="course_year" required></span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="high-sch">
+                <p class="education-title">High School</p>
+                <table>
+                    <tr>
+                        <td><p>Board:</p></td>
+                        <input type="hidden" name="edu_type" value="highSch">
+                        <td><span><input type="text" name="high_board" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Institution:</p></td>
+                        <td><span><input type="text" name="high_inst" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Score:</p></td>
+                        <td><span><input type="text" name="high_perc" required>%</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="inter-sch">
+                <p class="education-title">Senior Secondary</p>
+                <table>
+                    <tr>
+                        <input type="hidden" name="edu_type" value="interSch">
+                        <td><p>Board:</p></td>
+                        <td><span><input type="text" name="inter_board" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Institution:</p></td>
+                        <td><span><input type="text" name="inter_inst" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Score:</p></td>
+                        <td><span><input type="text" name="inter_perc" required>%</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="grad">
+                <p class="education-title">Graduation</p>
+                <table>
+                    <tr>
+                        <input type="hidden" name="edu_type" value="grad">
+                        <td><p>Board:</p></td>
+                        <td><span><input type="text" name="grad_board" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Institution:</p></td>
+                        <td><span><input type="text" name="grad_inst" required></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Score:</p></td>
+                        <td><span><input type="text" name="grad_perc" required>%</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="admin-submit">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<!-- including footer -->
+<%- include("../admin-footer.ejs") -%>

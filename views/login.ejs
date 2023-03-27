@@ -1,0 +1,29 @@
+<!-- Header included -->
+<%- include("header.ejs") %>
+
+<section class="home-login">
+    <div class="login-box">
+        <form action="/close" method="post">
+            <div class="close-btn">
+                <button type="submit" name="close" value="yes">x</button>
+            </div>
+        </form>
+        <form action="<%= form_name%>" method="post">
+            <div class="login-content">
+                <div class="login-header">
+                    <h3><%= user_type %> Login</h3>
+                    <hr>
+                    <input type="number" name="userId" placeholder="Username" required><br>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="login-btn">
+                    <button type="submit">Login</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer included -->
+<%- include("footer.ejs") %>

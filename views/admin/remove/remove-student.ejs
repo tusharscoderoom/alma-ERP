@@ -1,0 +1,30 @@
+<!-- including header -->
+<%- include("../admin-header.ejs") -%>
+
+<section class="dlt-student">
+    <form  class="content-profile" action="/remove-student" method="post">
+        <div class="profile-personal">
+            <h3>Enter Details to remove Student</h3>
+            <hr>
+            <div class="user-personal">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="user-name">
+                                <p>Roll Number: </p><p><span><input type="number" name="dltRoll" required></span></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="admin-submit">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+<!-- including footer -->
+<%- include("../admin-footer.ejs") -%>

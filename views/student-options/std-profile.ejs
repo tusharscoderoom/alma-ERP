@@ -1,0 +1,149 @@
+<!-- including student portal header -->
+<%- include("../student-portal-header.ejs") %>
+
+<div class="std-content">
+    <div class="content-profile">
+        <div class="profile-personal">
+            <h3>Personal Information</h3>
+            <hr>
+            <div class="user-personal">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="user-name">
+                                <p>First Name: <span><%= fname%></span></p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="user-name">
+                                <p>Last Name: <span><%= lname%></span></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Contact:</p></td>
+                        <td><span class="p">+91 </span> <span><%= contact%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Email:</p></td>
+                        <td><span><%= email%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Permanent Address:</p></td>
+                        <td><span><%= addr%></span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="user-family">
+                <div class="user-parent">
+                    <table>
+                        <tr>
+                            <td><p>Father Name:</p></td>
+                            <td><span><%= father_name%></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Contact:</p></td>
+                            <td><span class="p">+91 </span> <span> <%= father_contact%></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Occupation:</p></td>
+                            <td><span><%= father_occup%></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+                <div class="user-parent">
+                    <table>
+                        <tr>
+                            <td><p>Mother Name:</p></td>
+                            <td><span><%= mother_name%></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Contact:</p></td>
+                            <td><span class="p">+91 </span> <span> <%= mother_contact%></span></td>
+                        </tr>
+                        <tr>
+                            <td><p>Occupation:</p></td>
+                            <td><span><%= mother_occup%></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="profile-educational">
+            <h3>Educational Details</h3>
+            <hr>
+            <div class="course">
+                <table>
+                    <tr>
+                        <td><p>Roll Number:</p></td>
+                        <td><span><%= clg_roll%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Course:</p></td>
+                        <td><span><%= course_name%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Year:</p></td>
+                        <td><span><%= course_year%></span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="high-sch">
+                <p class="education-title">High School</p>
+                <table>
+                    <tr>
+                        <td><p>Board:</p></td>
+                        <td><span><%= high_board%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Institution:</p></td>
+                        <td><span><%= high_name%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Score:</p></td>
+                        <td><span><%= high_score%>%</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="inter-sch">
+                <p class="education-title">Senior Secondary</p>
+                <table>
+                    <tr>
+                        <td><p>Board:</p></td>
+                        <td><span><%= inter_board%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Institution:</p></td>
+                        <td><span><%= inter_name%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Score:</p></td>
+                        <td><span><%= inter_score%>%</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="grad">
+                <p class="education-title">Graduation</p>
+                <table>
+                    <tr>
+                        <td><p>Board:</p></td>
+                        <td><span><%= grad_board%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Institution:</p></td>
+                        <td><span><%= grad_board%></span></td>
+                    </tr>
+                    <tr>
+                        <td><p>Score:</p></td>
+                        <td><span><%= grad_score%>%</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- including student portal footer -->
+<!-- </section> !! included !! -->
+<%- include("../student-portal-footer.ejs") %>

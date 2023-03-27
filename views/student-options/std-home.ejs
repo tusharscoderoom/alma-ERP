@@ -1,0 +1,65 @@
+<!-- including header -->
+<%- include("../header.ejs") %>
+
+<section class="home-menu">
+
+    <div class="menu-line">
+
+        <form action="/std-action" method="post">
+            <button class="menu-items" type="submit" name="std_options" value="profile">
+                <h2>Profile</h2> <hr>
+                <div class="imgbox">
+                    <img src="images/student/profile.jpg" alt="">
+                </div>
+            </button>
+        </form>
+        <form action="/std-action" method="post">
+            <button class="menu-items" type="submit" name="std_options" value="atten">
+                <h2>Attendance</h2> <hr>
+                <div class="imgbox">
+                    <img src="images/student/atten.jpg" alt="">
+                </div>
+            </button>
+        </form>
+        <form action="/std-action" method="post">
+            <button class="menu-items" type="submit" name="std_options" value="result">
+                    <h2>Result</h2> <hr>
+                    <div class="imgbox">
+                        <img src="images/student/result.jpg" alt="">
+                    </div>
+            </button>
+        </form>
+    </div>
+    
+
+    <div class="menu-line">
+
+        <form action="/std-action" method="post">
+            <button class="menu-items" type="submit" name="std_options" value="updates">
+                <h2>Updates</h2> <hr>
+                <div class="imgbox">
+                    <img src="images/student/update.jpg" alt="">
+                </div>
+            </button>  
+        </form>
+        <form action="/std-action" method="post">
+            <button class="menu-items" type="submit" name="std_options" value="placement">
+                <h2>Placement</h2> <hr>
+                <div class="imgbox">
+                    <img src="images/student/placement.jpg" alt="">
+                </div>
+            </button>  
+        </form>
+        <form action="/std-action" method="post">
+            <button class="menu-items" type="submit" name="std_options" value="fee">
+                <h2>Fee</h2> <hr>
+                <div class="imgbox">
+                    <img src="images/student/fee.jpg" alt="">
+                </div>
+            </button>
+        </form>
+    </div>    
+    </section>
+    
+    <!-- include footer -->
+<%- include("../footer.ejs") %>

@@ -1,0 +1,92 @@
+<!-- including student portal header -->
+<%- include("../student-portal-header.ejs") %>
+
+<div class="std-content">
+    <div class="content-fee">
+        <div class="fee-detail">
+            <h3>Fee Details</h3>
+            <div class="fee-header">
+                <table>
+                    <tr>
+                        <td>Roll No.: </td>
+                        <td><%= roll%></td>
+                    </tr>
+                    <tr>
+                        <td>Course: </td>
+                        <td><%= course%> (Year-<%= year%>)</td>
+                    </tr>
+                    <tr>
+                        <td>Name: </td>
+                        <td><%= std_name%></td>
+                    </tr>
+                    <tr>
+                        <td>Father's Name: </td>
+                        <td><%= father_name%></td>
+                    </tr>
+                </table>
+                <div class="fee-payment-to">
+                    <p><b>Bank Name: </b>ICICI BANK</p>
+                    <p><b>Acc Number: </b>12345678912340</p>
+                    <p><b>Acc Holder Name: </b>GL Bajaj Institute of Technology and Management</p>
+                    <p>Greater Noida, UP (201306)</p>
+                </div>
+            </div>
+            <div class="fee-content">
+                <table>
+                    <tr>
+                        <th>Fee Type</th>
+                        <th>Fee Amount</th>
+                        <th>Payment</th>
+                        <th>Pmt Date</th>
+                        <th>Balance</th>
+                    </tr>
+                    <tr>
+                        <td>Tuition</td>
+                        <td><span>Rs. </span>1,09,540<span>.00/-</span></td>
+                        <td><span>Rs. </span>1,00,000<span>.00/-</span></td>
+                        <td>12/10/22</td>
+                        <td><span>Rs. </span>9,540<span>.00/-</span></td>
+                    </tr>
+                    <tr>
+                        <td>Library</td>
+                        <td><span>Rs. </span>1,500<span>.00/-</span></td>
+                        <td><span>Rs. </span>0<span>.00/-</span></td>
+                        <td>12/10/22</td>
+                        <td><span>Rs. </span>1,500<span>.00/-</span></td>
+                    </tr>
+                    <tr>
+                        <td>Canteen</td>
+                        <td><span>Rs. </span>500<span>.00/-</span></td>
+                        <td><span>Rs. </span>0<span>.00/-</span></td>
+                        <td>12/10/22</td>
+                        <td><span>Rs. </span>500<span>.00/-</span></td>
+                    </tr>
+                    <tr>
+                        <td>Sports</td>
+                        <td><span>Rs. </span>100<span>.00/-</span></td>
+                        <td><span>Rs. </span>0<span>.00/-</span></td>
+                        <td>12/10/22</td>
+                        <td><span>Rs. </span>100<span>.00/-</span></td>
+                    </tr>
+                    <tr class="fee-total">
+                        <td></td>
+                        <td><span>Rs. </span>1,11,640<span>.00/-</span></td>
+                        <td><span>Rs. </span>1,00,00<span>.00/-</span></td>
+                        <td></td>
+                        <td><span>Rs. </span>11,640<span>.00/-</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="fee-btn">
+                <form action="/fee-submit" method="post">
+                    <button type="submit">Pay Dues</button>
+                    <button id="receipt-dwnl">Get Receipt</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- including student portal footer -->
+<!-- </section> !! included !! -->
+<%- include("../student-portal-footer.ejs") %>

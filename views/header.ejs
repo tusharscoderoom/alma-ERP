@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <!-- bootstrap starts -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <!-- bootstrap ends -->
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/student.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <title>Alma ERP</title>
+  </head>
+  <% if(header_title == "Admin") { %> 
+  <body style="background-image: url('/images/admin-home.jpg')">
+  <% } else { %>
+  <body>
+  <% } %>
+    <% if(header_title == "Admin") { %> 
+    <header class="header" style="background: #ec8230;">
+    <% } else { %>
+    <header class="header">
+    <% } %>
+        <!-- <div class="item-container"> -->
+            <ul>
+                <li class="page-title">
+                    <h1><%= header_title %></h1>
+                </li>
+                <div class="links">
+                    <form action="<%= form_name%>" method="post">
+                        <li>
+                            <div class="menu-item">
+                                <% if(header_title == "Alma ERP") { %>
+                                    <a class="header-icon fa-solid fa-house"></a>
+                                    <a class="item-btn-a"
+                                    href="#home-home" 
+                                    type="submit" 
+                                    name="<%= header_name%>" 
+                                    value="home">Home</a>
+                                <% } else if (header_title == "Admin") { %>
+                                    <a class="header-icon fa-solid fa-graduation-cap"></a>
+                                    <button class="item-btn"
+                                    type="submit" 
+                                    name="<%= header_name%>" 
+                                    value="student">Student</button>
+                                <% } else { %>
+                                    <a class="header-icon fa-solid fa-house"></a>
+                                    <button class="item-btn"
+                                    type="submit" 
+                                    name="<%= header_name%>" 
+                                    value="home">Home</button>
+                                <% } %>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-item">
+                                <% if(header_title == "Alma ERP") { %>
+                                    <a class="header-icon fa-solid fa-circle-info"></a>
+                                    <a class="item-btn-a"
+                                    href="#home-about" 
+                                    type="submit" 
+                                    name="<%= header_name%>" 
+                                    value="about">About</a>
+                                <% } else if (header_title == "Admin") { %>
+                                    <a class="header-icon fa-solid fa-user-tie"></a>
+                                    <button class="item-btn"
+                                    type="submit" 
+                                    name="<%= header_name%>"
+                                    value="teacher">Teacher</button>
+                                <% } else { %>
+                                    <a class="header-icon fa-solid fa-id-card-clip" style="transform: translateX(100%);"></a>
+                                    <button class="item-btn" style="transform: translateX(58%);"
+                                    type="submit" 
+                                    name="<%= header_name%>" 
+                                    value="profile">Profile</button>
+                                <% } %>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-item">
+                                <% if(header_title == "Alma ERP") { %>
+                                    <a class="header-icon fa-sharpe fa-solid fa-phone"></a>
+                                    <a class="item-btn-a"
+                                    href="#home-query"
+                                    type="submit" 
+                                    name="<%= header_name%>" 
+                                    value="contact">Contact</a>
+                                <% } else if (header_title == "Admin") { %>
+                                    <a class="header-icon fa-solid fa-file-invoice"></a>
+                                    <button class="item-btn"
+                                    type="submit" 
+                                    name="<%= header_name%>" 
+                                    value="course">Course</button>
+                                <% } %>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="menu-item">
+                                <% if(header_title == "Alma ERP") { %>
+                                    <a class="header-icon fa-solid fa-user"></a>
+                                    <a class="item-btn-a"
+                                    href="#home-main" 
+                                    type="submit" 
+                                    name="<%= header_name%>" 
+                                    value="login">Login</a>
+                                <% } else { %>
+                                    <a class="header-icon fa-solid fa-right-from-bracket"></a>
+                                    <button class="item-btn"
+                                    type="submit" 
+                                    name="<%= header_name%>"
+                                    value="logout">Logout</button>
+                                <% } %>
+                            </div>
+                        </li>                    
+                    </form>
+                </div>
+                <li class="menu-greet">
+                    <h4 class="">Welcome to <br><span><%= header_greet %></span> </h4>
+                </li>
+            </ul>
+            <!-- <div>
+                <input type="text" name="searchItem">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div> -->
+        <!-- </div> -->
+    </header>
+  <!-- </body>
+</html> -->

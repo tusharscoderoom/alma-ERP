@@ -1,0 +1,25 @@
+<!-- includint header -->
+<%- include("../header.ejs") -%>
+
+<section class="admin-home">
+    <form action="/admin-home" method="post">
+        <button type="submit" name="adminAction" value="admin-student">
+                <div class="admin-card">
+                    <p>Manage</p><h3>Student</h3>
+                </div>
+            </button>
+            <button type="submit" name="adminAction" value="admin-teacher">
+                <div class="admin-card">
+                    <p>Manage</p><h3>Teacher</h3>
+                </div>
+            </button>
+            <button type="submit" name="adminAction" value="admin-course">
+                <div class="admin-card">
+                    <p>Manage</p><h3>Course</h3>
+                </div>
+            </button>
+        </form>
+</section>
+
+<!-- includint header -->
+<%- include("../footer.ejs") -%>

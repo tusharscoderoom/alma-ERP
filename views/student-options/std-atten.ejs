@@ -1,0 +1,57 @@
+<!-- including student portal header -->
+<%- include("../student-portal-header.ejs") %>
+
+<!-- the content to update using sidebar -->
+<div class="std-content">
+    <div class="std-card-container">
+        <div class="std-card">
+            <div class="std-card-head">
+                <i class="fa-regular fa-calendar-days"></i>
+                <h2>Attendance</h2><hr>
+            </div>
+            <div class="std-card-option-box">
+                <select name="attendance-period" id="" class="std-card-options">
+                    <option value="month">Month</option>
+                    <option value="sem">Semester</option>
+                    <option value="year">Year</option>
+                    <option value="custome">Custome</option>
+                </select>
+            </div>
+        </div>
+        <div class="std-card"></div>
+        <div class="std-card"></div>
+    </div>
+    <div class="std-extended-card-container">
+        <div class="std-extended-card">
+            <canvas id="std-atten-chart" class="std-attendence-chart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+<script>
+    var xValues = ["Week-1", "Week-2", "Week-3", "Week-4"];
+    var yValues = [75, 80, 68, 75];
+    var barColors = ["red", "green","blue","orange"];
+
+    new Chart("std-atten-chart", {
+    type: "pie",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        legend: {display: true},
+        title: {
+        display: true,
+        text: "Monthly Attendance"}
+    }});
+</script>
+
+<!-- including student portal footer -->
+<!-- </section> !! included !! -->
+<%- include("../student-portal-footer.ejs") %>

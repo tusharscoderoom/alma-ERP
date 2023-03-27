@@ -1,0 +1,77 @@
+<!-- including header -->
+<%- include("header.ejs") %>
+
+<section class="std-main">
+    <!-- <div class="extra"></div> -->
+    <div class="std-sidebar-container">
+        <div class="std-sidebar">
+            <table>
+                <tr class="std-options">
+                    <td><i class="fa-solid fa-address-card"></i></td>
+                    <td>
+                        <form id="std-profile" action="/std-action" method="post">
+                            <button type="submit"
+                                name="std_options" 
+                                value="profile"
+                                >Profile</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr class="std-options">
+                    <td><i class="fa-solid fa-laptop"></i></td>
+                    <td>
+                        <form id="std-atten" action="/std-action" method="post">
+                            <button type="submit"
+                                name="std_options"
+                                value="atten"
+                                >Attendance</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr class="std-options">
+                    <td><i class="fa-solid fa-award"></i></td>
+                    <td>
+                        <form id="std-result" action="/std-action" method="post">
+                            <button type="submit"
+                                name="std_options"
+                                value="result"
+                                >Result</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr class="std-options">
+                    <td><i class="fa-solid fa-qrcode"></i></td>
+                    <td>
+                        <form id="std-placement" action="/std-action" method="post">
+                            <button type="submit"
+                                name="std_options"
+                                value="placement"
+                                >Placement</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr class="std-options">
+                    <td><i class="fa-solid fa-bolt"></i></td>
+                    <td>
+                        <form id="std-update" action="/std-action" method="post">
+                            <button type="submit"
+                                name="std_options"
+                                value="updates"
+                                >Updates</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr class="std-options">
+                    <td><i class="fa-solid fa-building-columns"></i></td>
+                    <td>
+                        <form id="std-fee" action="/std-action" method="post">
+                            <button type="submit"
+                                name="std_options"
+                                value="fee"
+                                >Fee</button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>

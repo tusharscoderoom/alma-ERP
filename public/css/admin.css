@@ -1,0 +1,123 @@
+.admin-home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* admin-home-btn */
+.admin-home-btn {
+    position: fixed;
+    bottom: 6%;
+    left: 3%;
+}
+.admin-home-btn button {
+    outline: none;
+    background: #ec8230;
+    color: #fff;
+    border: none;
+    border-radius: 100%;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    box-shadow: 0 0 12px 3px rgba(236, 129, 48, 0.5);
+}
+.admin-home-btn button p {
+    font-size: 0.75rem;
+}
+
+/* admin-form */
+.admin-home form {
+    width: 60%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.admin-home form button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    text-decoration: none;
+}
+.admin-home form button .admin-card {
+    width: 200px;
+    height: 180px;
+    text-align: center;
+    border-radius: 35px 8px 20px 35px;
+    background: #CDC9C0;
+    /* box-shadow: -8px -8px 12px 1px rgba(236, 129, 48, 0.5); */
+    box-shadow: -8px -8px 16px 0px rgba(0, 0, 0, 0.1);
+
+    /* border: 1px solid red; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.admin-home form button:nth-child(2) .admin-card {
+    border-radius: 8px;
+}
+.admin-home form button:nth-child(3) .admin-card {
+    border-radius: 8px 35px 35px 20px;
+}
+.admin-home form button .admin-card p {
+    font-size: 0.8rem;
+    writing-mode: vertical-lr;
+    transform: translate(140%, 70%) rotate(225deg);
+    color: #5C5344;
+}
+.admin-home form button .admin-card h3 {
+    font-size: 2rem;
+    transform: translateY(25%);
+    color: #464036;
+}
+.admin-home form button .admin-card:hover {
+    box-shadow: -8px -8px 16px 0px rgba(236, 129, 48, 0.25);
+}
+
+
+/* ---------------> admin-student <--------------- */
+/* show-student */
+.std-content .show-student {
+    padding: 100px 0 0 30px;
+    height: 100vh;
+    /* border: 1px solid red; */
+    background: #CECBC4;
+}
+.std-content .show-student .show-student-content {
+    border-spacing: 32px 16px;
+}
+.std-content .show-student .show-student-content td {
+    font-size: 0.85rem;
+}
+
+/* add-student */
+.std-content .add-student, .std-content .dlt-student {
+    background-color: #CDC9C0;
+}
+.admin-submit {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.admin-submit button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 6px 12px;
+    background: #ec8230;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.admin-submit button:nth-child(2) {
+    background: #fff;
+    border: 2px solid #ec8230;
+    color: #ec8230;
+}
+
+/* remove-student */
+.std-content .dlt-student {
+    height: 100vh;
+}
